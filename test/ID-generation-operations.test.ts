@@ -23,21 +23,21 @@ describe('ID generation suite 2', () => {
         expect(lvId().length).toBe(8)
     })
 
-    test('Verify generated Latvian ID consists from prefix "LVA" and 4 digits', () => {
+    test('Verify generated Latvian ID consists from prefix "LVA-" and 4 digits', () => {
         expect(/LVA-\d{4}/.test(lvId())).toBe(true)
     })
 })
 
 describe('ID generation suite 3', () => {
     test('Verify generated Lithuanian ID has "LTU-" prefix', () => {
-        expect(ltId().startsWith('LTU')).toBe(true)
+        expect(ltId().startsWith('LTU-')).toBe(true)
     })
 
     test('Verify generated Lithuanian ID has 8 symbols', () => {
         expect(ltId().length).toBe(8)
     })
 
-    test('Verify generated Lithuanian ID consists from prefix "LTU" and 4 digits', () => {
+    test('Verify generated Lithuanian ID consists from prefix "LTU-" and 4 digits', () => {
         expect(/LTU-\d{4}/.test(ltId())).toBe(true)
     })
 })
